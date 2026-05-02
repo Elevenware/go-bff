@@ -5,7 +5,7 @@ A small Go library that turns any `net/http` server into an OpenID Connect
 secrets or tokens, the BFF holds the session.
 
 ```go
-import "github.com/elevenware/bff"
+import "github.com/elevenware/go-bff"
 
 b, err := bff.New("https://app.example.com/callback")
 if err != nil {
