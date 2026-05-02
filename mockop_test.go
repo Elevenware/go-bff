@@ -177,7 +177,7 @@ func (op *mockOP) signIDToken(claims map[string]any) string {
 
 func (op *mockOP) userinfo(w http.ResponseWriter, r *http.Request) {
 	if !strings.HasPrefix(r.Header.Get("Authorization"), "Bearer ") {
-		http.Error(w, "unauthorized", 401)
+		http.Error(w, "unauthorized", http.StatusUnauthorized)
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
